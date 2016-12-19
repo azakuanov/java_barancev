@@ -1,10 +1,14 @@
 <list>
   <contact>
-    <firstName>test</firstName>
-    <lastName>testerov</lastName>
+    <firstName>firstname 0</firstName>
+    <lastName>lastname 0</lastName>
   </contact>
   <contact>
-    <firstName>test</firstName>
-    <lastName>testerov</lastName>
+    <firstName>firstname 1</firstName>
+    <lastName>lastname 1</lastName>
+  </contact>
+  <contact>
+    <firstName>firstname 2</firstName>
+    <lastName>lastname 2</lastName>
   </contact>
 </list>

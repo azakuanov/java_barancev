@@ -5,23 +5,46 @@ import java.io.File;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
+
+import javax.persistence.*;
 
 @XStreamAlias("contact")
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
   @XStreamOmitField
+  @Id
+  @Column(name = "id")
   private int id= Integer.MAX_VALUE;
   @Expose
+  @Column(name = "firstname")
   private String firstName;
+  @Transient
   private String middleName;
   @Expose
+  @Column(name = "lastname")
   private String lastName;
+  @Transient
   private String group;
+  @Column(name = "home")
+  @Type(type = "text")
   private String homePhone;
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobilePhone;
+  @Column(name = "work")
+  @Type(type = "text")
   private String workPhone;
+  @Transient
   private String allPhones;
+  @Transient
   private String address;
+  @Transient
   private String email;
+  @Column(name = "photo")
+  @Type(type = "text")
+  @Transient
   private File photo;
 
   public File getPhoto() {
